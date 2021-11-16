@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppS6.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Lista de Registros" HorizontalTextAlignment="Center" TextColor="White" FontSize="26"/>
+        </Frame>
+       <!-- <Button Text="consultar" x:Name="btnConsultar" Clicked="btnConsultar_Clicked"/>-->
+
+        <ListView x:Name="MyListView" ItemSelected="item">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Clicked="datos_Clicked" x:Name="datos" CommandParameter="{Binding nombre}" Text="nombres">
+                            </MenuItem>
+                        </ViewCell.ContextActions>
+                        
+                        <StackLayout x:Name="prueba">
+                            <Label Text="{Binding nombre}" x:Name="lblNombre"></Label>
+                            <Label Text="{Binding apellido}" x:Name="lblApellido"></Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Registrar" x:Name="btbInsertar" Clicked="btbInsertar_Clicked"/>
+        <Button Text="Actualizar"  x:Name="btnActualizar" Clicked="btnActualizar_Clicked" />
+        <Button Text="Eliminar"  x:Name="btbEliminar" Clicked="btbEliminar_Clicked" />
+
+        
+    </StackLayout>
+
+</ContentPage>
+
+    

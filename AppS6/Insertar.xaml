@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppS6.Insertar"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Registrar Usuarios" HorizontalTextAlignment="Center" TextColor="White" FontSize="26"/>
+            </Frame>
+            <Entry Placeholder="código" Keyboard="Numeric" x:Name="txtCodigo"/>
+            <Entry Placeholder="nombre" x:Name="txtNombre"/>
+            <Entry Placeholder="apellido" x:Name="txtApellido"/>
+            <Entry Placeholder="edad" Keyboard="Numeric" x:Name="txtEdad"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>                    
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition>
+                    </ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnGuardar" Text="Guardar" Grid.Row="0" Grid.Column="0" Clicked="btnGuardar_Clicked"/>
+                <Button x:Name="btnRegresar" Text="Regresar" Grid.Row="0" Grid.Column="1" Clicked="btnRegresar_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
